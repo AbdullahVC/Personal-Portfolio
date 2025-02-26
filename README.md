@@ -55,7 +55,7 @@ This site will be a **central hub** for my work, featuring:
 📧 **Email:** info@abdullahvcoskun.dev  
 🌐 **Website:** [abdullahvcoskun.dev](https://abdullahvcoskun.dev)  
 👨‍💻 **GitHub:** [AbdullahVC](https://github.com/AbdullahVC)  
-💼 **LinkedIn:** [Your LinkedIn Profile](https://linkedin.com/in/abdullahvcoskun)  
+💼 **LinkedIn:** [Abdullah Veysel Çoşkun](https://linkedin.com/in/abdullahvcoskun)  
 
 ---
 

@@ -1,25 +1,24 @@
-import Sidebar from "./components/Sidebar";
-import About from "./components/About";
-import Experience from "./components/Experience";
-import Projects from "./components/Projects";
-import Navbar from "./components/Navbar";
+import { About, Experience, Projects, Sidebar, Cursor } from "./components";
+import "./App.css";
 
 function App() {
   return (
-    <div className="relative">
-      <Navbar />
-      <Sidebar />
-      <main>
-        <section id="about">
-          <About />
-        </section>
-        <section id="experience">
-          <Experience />
-        </section>
-        <section id="projects">
-          <Projects />
-        </section>
-      </main>
+    <div className="app">
+      <Sidebar className="sidebar" />
+      <div className="main-content">
+        <Cursor />
+        <main>
+          <section id="about">
+            <About />
+          </section>
+          <section id="experience">
+            <Experience />
+          </section>
+          <section id="projects">
+            <Projects />
+          </section>
+        </main>
+      </div>
     </div>
   );
 }
