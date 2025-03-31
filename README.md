@@ -20,10 +20,7 @@ This site will be a **central hub** for my work, featuring:
 
 ## 🛠️ **Tech Stack**  
 🚀 **Frontend:** React, Tailwind CSS, Material UI  
-🛠 **Backend (Planned):** ASP.NET Core, Entity Framework  
-⚡ **Deployment:** Netlify / Vercel  
-📡 **APIs & Tools:** EmailJS, Framer Motion  
-
+⚡ **Deployment:** Netlify
 ---
 
 ## 🌟 **Planned Features**  
