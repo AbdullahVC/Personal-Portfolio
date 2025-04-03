@@ -1,0 +1,59 @@
+.app {
+  display: flex;
+  height: 100vh;
+}
+
+.sidebar-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100%;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: self-end;
+  justify-content: space-between;
+  z-index: 100;
+  text-align: right;
+  padding-top: 3rem;
+  gap: 3rem;
+}
+
+.main-container {
+  width: 60%;
+  height: 100%;
+  margin-left: 50%;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-around;
+  overflow-y: auto;
+  scroll-behavior: auto;
+  padding-top: 3rem;
+}
+
+/* Scrollbar */
+
+/* Tüm scroll bar */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Scroll bar arka planı */
+::-webkit-scrollbar-track {
+  background: #0f172a; /* çok koyu lacivert gibi bir ton */
+}
+
+/* Scroll bar kaydırma parçası */
+::-webkit-scrollbar-thumb {
+  background-color: #475569; /* gri-mavi karışımı */
+  border-radius: 6px;
+  border: 2px solid #0f172a; /* arka planla uyumlu iç boşluk efekti */
+}
+
+/* Hover efekti */
+::-webkit-scrollbar-thumb:hover {
+  background-color: #64748b; /* biraz daha açık gri */
+}

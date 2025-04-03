@@ -1,0 +1,11 @@
+.projects-container {
+  display: flex;
+  flex-direction: column;
+  margin-top: 19rem;
+}
+
+.projects-item-container {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
