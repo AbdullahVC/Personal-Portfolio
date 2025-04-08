@@ -54,6 +54,7 @@
   .main-container {
     width: 100%;
     height: 100vh;
+    padding: 0;
   }
 
   .main-section {
@@ -64,40 +65,40 @@
     align-items: center;
   }
   #skills {
-    margin-top: 5vh;
+    margin-top: 3vh;
   }
 
   #experiences {
-    margin-top: 45vh;
+    margin-top: 35vh;
   }
 
   #projects {
-    margin-top: 19vh;
+    margin-top: 10vh;
   }
 }
 
 /* 📱 Büyük Telefon - 768px ve altı */
 @media (max-width: 768px) {
   #experiences {
-    margin-top: 35vh;
+    margin-top: 33vh;
   }
 
   #projects {
-    margin-top: 25vh;
+    margin-top: 13vh;
   }
 }
 
 /* 📱 Küçük Telefon - 576px ve altı */
 @media (max-width: 576px) {
   #skills {
-    margin-top: 12vh;
+    margin-top: 3vh;
   }
 
   #experiences {
-    margin-top: 57vh;
+    margin-top: 31vh;
   }
 
   #projects {
-    margin-top: 45vh;
+    margin-top: 17vh;
   }
 }
