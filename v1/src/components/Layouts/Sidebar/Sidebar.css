@@ -2,27 +2,11 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
-  width: 100%;
-  max-width: 600px;
-}
-
-.sidebar-h1 {
-  font-size: clamp(2rem, 4vw, 2.5rem);
-  margin-bottom: 1rem;
-}
-
-.sidebar-h2 {
-  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
-  color: #94a3b8;
-  line-height: 1.4;
 }
 
 .sidebar-p {
   text-align: right;
-  width: 100%;
-  max-width: 500px;
-  line-height: 1.6;
-  color: #94a3b8;
+  width: 70%;
 }
 
 .sidebar-nav {
@@ -30,15 +14,13 @@
   flex-direction: column;
   gap: 12px;
   padding-left: 12px;
-  width: 100%;
-  max-width: 300px;
 }
 
 .sidebar-nav a {
-  font-size: clamp(1rem, 1.5vw, 1.2rem);
+  font-size: clamp(1.2rem, 1.5vw, 1.4rem);
   color: #a0aec0;
   text-decoration: none;
-  position: relative; /* önemli: before için */
+  position: relative;
   transition: all 0.3s ease;
 }
 
@@ -48,13 +30,12 @@
 }
 
 .sidebar-nav a.active {
-  font-size: clamp(1.1rem, 2vw, 1.4rem);
+  font-size: clamp(1.3rem, 2vw, 1.5rem);
   font-weight: bold;
   color: #ffffff;
   transform: scale(1.1);
   text-shadow: 0 0 6px #00e0ff;
 }
-
 .sidebar-nav a.active::before {
   content: "";
   position: absolute;
@@ -67,53 +48,24 @@
   border-radius: 50%;
 }
 
-/* Responsive Tasarım */
-@media screen and (max-width: 768px) {
+/* 📱 Tablet - 992px ve altı */
+@media (max-width: 992px) {
   .sidebar-main {
+    display: flex;
+    flex-direction: column;
     align-items: center;
-    padding: 0 1rem;
-    margin: 0 auto;
   }
-
-  .sidebar-h1 {
-    font-size: clamp(1.8rem, 5vw, 2.2rem);
-    text-align: center;
-    margin-bottom: 0.5rem;
-  }
-
-  .sidebar-h2 {
-    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
-    text-align: center;
-  }
-
-  .sidebar-p {
-    text-align: center;
-    font-size: 0.95rem;
-    margin: 1rem auto;
-    max-width: 90%;
+  .sidebar-nav {
+    display: none;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  .sidebar-main {
-    max-width: 450px;
-    align-items: center;
-    margin: 0 auto;
-  }
+/* 📱 Büyük Telefon - 768px ve altı */
+@media (max-width: 768px) {
+  /* Büyük telefonlar için stiller */
+}
 
-  .sidebar-h1 {
-    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
-    text-align: center;
-  }
-
-  .sidebar-h2 {
-    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
-    text-align: center;
-  }
-
-  .sidebar-p {
-    font-size: 0.9rem;
-    text-align: center;
-    margin: 1rem auto;
-  }
+/* 📱 Küçük Telefon - 576px ve altı */
+@media (max-width: 576px) {
+  /* Küçük telefonlar için stiller */
 }

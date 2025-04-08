@@ -33,3 +33,71 @@
 #projects {
   margin-top: 5vh;
 }
+
+/* 💻 Laptop - 1200px ve altı */
+@media (max-width: 1200px) {
+  #skills {
+    margin-top: 6vh;
+  }
+
+  #experiences {
+    margin-top: 25vh;
+  }
+
+  #projects {
+    margin-top: 32vh;
+  }
+}
+
+/* 📱 Tablet - 992px ve altı */
+@media (max-width: 992px) {
+  .main-container {
+    width: 100%;
+    height: 100vh;
+  }
+
+  .main-section {
+    width: 100%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  #skills {
+    margin-top: 5vh;
+  }
+
+  #experiences {
+    margin-top: 45vh;
+  }
+
+  #projects {
+    margin-top: 19vh;
+  }
+}
+
+/* 📱 Büyük Telefon - 768px ve altı */
+@media (max-width: 768px) {
+  #experiences {
+    margin-top: 35vh;
+  }
+
+  #projects {
+    margin-top: 25vh;
+  }
+}
+
+/* 📱 Küçük Telefon - 576px ve altı */
+@media (max-width: 576px) {
+  #skills {
+    margin-top: 12vh;
+  }
+
+  #experiences {
+    margin-top: 57vh;
+  }
+
+  #projects {
+    margin-top: 45vh;
+  }
+}

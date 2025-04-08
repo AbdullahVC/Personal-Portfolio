@@ -7,3 +7,25 @@
   flex-direction: column;
   gap: 5px;
 }
+
+/* 💻 Laptop - 1200px ve altı */
+@media (max-width: 1200px) {
+  .experiences-container {
+    width: 65%;
+  }
+}
+
+/* 📱 Tablet - 992px ve altı */
+@media (max-width: 992px) {
+  /* Tablet görünümü için stiller */
+}
+
+/* 📱 Büyük Telefon - 768px ve altı */
+@media (max-width: 768px) {
+  /* Büyük telefonlar için stiller */
+}
+
+/* 📱 Küçük Telefon - 576px ve altı */
+@media (max-width: 576px) {
+  /* Küçük telefonlar için stiller */
+}

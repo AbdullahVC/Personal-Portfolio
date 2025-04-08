@@ -1,41 +1,37 @@
 .app {
   display: flex;
-  min-height: 100vh;
-  background-color: #0f172a;
+  height: 100vh;
 }
 
 .sidebar-container {
   position: fixed;
   top: 0;
   left: 0;
-  height: 100vh;
+  height: 100%;
   width: 50%;
   display: flex;
   flex-direction: column;
-  align-items: flex-end;
+  align-items: self-end;
   justify-content: space-between;
   z-index: 100;
   text-align: right;
-  padding: 3rem 2rem;
+  padding-top: 3rem;
   gap: 3rem;
 }
 
 .main-container {
-  width: 50%;
-  min-height: 100vh;
+  width: 60%;
+  height: 100%;
   margin-left: 50%;
-  padding: 3rem 2rem;
+  padding-left: 2rem;
+  padding-bottom: 2rem;
   display: flex;
   flex-direction: column;
-  gap: 4rem;
-}
-
-.main-section {
-  width: 100%;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
+  align-items: flex-start;
+  justify-content: space-around;
+  overflow-y: auto;
+  scroll-behavior: auto;
+  padding-top: 3rem;
 }
 
 /* Scrollbar */
@@ -44,92 +40,53 @@
 ::-webkit-scrollbar {
   width: 10px;
 }
-
 /* Scroll bar arka planı */
 ::-webkit-scrollbar-track {
   background: #0f172a; /* çok koyu lacivert gibi bir ton */
 }
-
 /* Scroll bar kaydırma parçası */
 ::-webkit-scrollbar-thumb {
   background-color: #475569; /* gri-mavi karışımı */
   border-radius: 6px;
   border: 2px solid #0f172a; /* arka planla uyumlu iç boşluk efekti */
 }
-
 /* Hover efekti */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #64748b; /* biraz daha açık gri */
 }
 
-/* Responsive Tasarım */
-@media screen and (max-width: 768px) {
-  /* Tablet ve Mobil */
+/* 📱 Tablet - 992px ve altı */
+@media (max-width: 992px) {
   .app {
-    flex-direction: column;
+    display: flex; /* bu önemli */
+    flex-direction: column; /* bu zaten doğru */
   }
 
   .sidebar-container {
-    position: relative;
+    position: relative; /* fixed değil artık */
     width: 100%;
     height: auto;
-    min-height: auto;
-    padding: 2rem 1rem;
-    align-items: center;
+    z-index: 0;
     text-align: center;
-    margin: 0 auto;
-  }
-
-  .sidebar-container .sidebar-nav {
-    display: none;
+    align-items: center;
+    padding-top: 2rem;
   }
 
   .main-container {
     width: 100%;
-    margin: 0 auto;
-    padding: 2rem 1rem;
-    min-height: auto;
-    align-items: center;
-  }
-
-  .main-section {
-    min-height: auto;
-    padding: 2rem 0;
-    align-items: center;
-    text-align: center;
+    height: auto;
+    margin-left: 0;
+    padding-left: 0;
+    padding-top: 1rem;
   }
 }
 
-@media screen and (min-width: 769px) and (max-width: 1024px) {
-  /* Tablet Landscape */
-  .sidebar-container {
-    width: 40%;
-    padding: 2rem;
-    align-items: center;
-    text-align: center;
-  }
-
-  .main-container {
-    width: 60%;
-    margin-left: 40%;
-    padding: 2rem;
-    align-items: center;
-  }
-
-  .main-section {
-    align-items: center;
-    text-align: center;
-  }
+/* 📱 Büyük Telefon - 768px ve altı */
+@media (max-width: 768px) {
+  /* Büyük telefonlar için stiller */
 }
 
-@media screen and (min-width: 1025px) {
-  /* Desktop */
-  .sidebar-container {
-    width: 50%;
-  }
-
-  .main-container {
-    width: 50%;
-    margin-left: 50%;
-  }
+/* 📱 Küçük Telefon - 576px ve altı */
+@media (max-width: 576px) {
+  /* Küçük telefonlar için stiller */
 }
