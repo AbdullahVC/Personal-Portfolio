@@ -1,19 +1,19 @@
 .experience-card {
   display: flex;
   flex-direction: row;
-  gap: 24px;
+  gap: 16px;
   background-color: rgba(255, 255, 255, 0.03);
-  padding: 24px;
-  border-radius: 12px;
-  margin-bottom: 24px;
-  box-shadow: 0 4px 12px rgba(0, 224, 255, 0.08);
+  padding: 16px;
+  border-radius: 8px;
+  margin-bottom: 16px;
+  box-shadow: 0 2px 8px rgba(0, 224, 255, 0.08);
 }
 
 .experience-card-date {
-  font-size: 14px;
+  font-size: 13px;
   font-weight: bold;
   color: #7dd3fc;
-  min-width: 120px;
+  min-width: 100px;
 }
 
 .experience-card-content {
@@ -21,10 +21,10 @@
 }
 
 .experience-title {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
   color: #ffffff;
-  margin-bottom: 4px;
+  margin-bottom: 2px;
 }
 
 .experience-company {
@@ -34,24 +34,24 @@
 
 .experience-description {
   color: #cbd5e0;
-  margin-top: 8px;
-  font-size: 14px;
-  line-height: 1.5;
+  margin-top: 6px;
+  font-size: 13px;
+  line-height: 1.4;
 }
 
 .experience-tags {
-  margin-top: 12px;
+  margin-top: 8px;
   display: flex;
   flex-wrap: wrap;
-  gap: 8px;
+  gap: 6px;
 }
 
 .experience-tag {
   background-color: #00e0ff10;
   color: #00e0ff;
-  font-size: 12px;
-  padding: 4px 10px;
-  border-radius: 8px;
+  font-size: 11px;
+  padding: 3px 8px;
+  border-radius: 6px;
   font-weight: 500;
   border: 1px solid #00e0ff50;
 }

@@ -1,10 +1,9 @@
 .experiences-container {
-  display: flex;
-  flex-direction: column;
-  margin-top: 19rem;
+  width: 55%;
+  text-align: justify;
 }
 .experiences-item-container {
   display: flex;
   flex-direction: column;
-  gap: 30px;
+  gap: 5px;
 }

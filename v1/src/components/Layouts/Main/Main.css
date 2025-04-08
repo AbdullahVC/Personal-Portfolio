@@ -1,8 +1,35 @@
+.main-container {
+  width: 60%;
+  height: 100vh;
+  margin-left: 50%;
+  padding: 0 2rem;
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+  scroll-behavior: smooth;
+}
+
 .main-section {
   width: 100%;
   height: 100%;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  padding-bottom: 5rem;
+  justify-content: flex-start;
+  scroll-snap-align: center; /* Smooth scroll için */
+}
+/* Her section için margin ayarları */
+#about {
+  margin-top: 4vh;
+}
+
+#skills {
+  margin-top: 8vh;
+}
+
+#experiences {
+  margin-top: 10vh;
+}
+
+#projects {
+  margin-top: 5vh;
 }

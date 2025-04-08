@@ -2,7 +2,6 @@ import "./About.css";
 const About = () => {
   return (
     <div className="about-container">
-      <h1 className="about-title">Hakkımda</h1>
       <p className="about-text">
         Ben Abdullah Veysel Çoşkun. Yazılımla geç tanıştım ama bu alanda
         derinleşme isteğim erken başladı. Almanya’da doğdum, Türkiye’de büyüdüm.

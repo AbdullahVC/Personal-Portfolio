@@ -2,11 +2,27 @@
   display: flex;
   flex-direction: column;
   align-items: flex-end;
+  width: 100%;
+  max-width: 600px;
+}
+
+.sidebar-h1 {
+  font-size: clamp(2rem, 4vw, 2.5rem);
+  margin-bottom: 1rem;
+}
+
+.sidebar-h2 {
+  font-size: clamp(1.2rem, 2.5vw, 1.5rem);
+  color: #94a3b8;
+  line-height: 1.4;
 }
 
 .sidebar-p {
   text-align: right;
-  width: 70%;
+  width: 100%;
+  max-width: 500px;
+  line-height: 1.6;
+  color: #94a3b8;
 }
 
 .sidebar-nav {
@@ -14,6 +30,8 @@
   flex-direction: column;
   gap: 12px;
   padding-left: 12px;
+  width: 100%;
+  max-width: 300px;
 }
 
 .sidebar-nav a {
@@ -47,4 +65,55 @@
   height: 6px;
   background-color: #00e0ff;
   border-radius: 50%;
+}
+
+/* Responsive Tasarım */
+@media screen and (max-width: 768px) {
+  .sidebar-main {
+    align-items: center;
+    padding: 0 1rem;
+    margin: 0 auto;
+  }
+
+  .sidebar-h1 {
+    font-size: clamp(1.8rem, 5vw, 2.2rem);
+    text-align: center;
+    margin-bottom: 0.5rem;
+  }
+
+  .sidebar-h2 {
+    font-size: clamp(1.1rem, 3.5vw, 1.3rem);
+    text-align: center;
+  }
+
+  .sidebar-p {
+    text-align: center;
+    font-size: 0.95rem;
+    margin: 1rem auto;
+    max-width: 90%;
+  }
+}
+
+@media screen and (min-width: 769px) and (max-width: 1024px) {
+  .sidebar-main {
+    max-width: 450px;
+    align-items: center;
+    margin: 0 auto;
+  }
+
+  .sidebar-h1 {
+    font-size: clamp(1.8rem, 3.5vw, 2.2rem);
+    text-align: center;
+  }
+
+  .sidebar-h2 {
+    font-size: clamp(1.1rem, 2.5vw, 1.4rem);
+    text-align: center;
+  }
+
+  .sidebar-p {
+    font-size: 0.9rem;
+    text-align: center;
+    margin: 1rem auto;
+  }
 }

@@ -1,12 +1,60 @@
 import "./Sidebar.css";
-import { Skills, SocialLinks } from "../../index";
-import { useState } from "react";
+import { SocialLinks } from "../../index";
+import { useState, useEffect } from "react";
+
 const Sidebar = () => {
   const [activeLink, setActiveLink] = useState("#about");
 
-  const handleClick = (link) => {
-    setActiveLink(link);
+  useEffect(() => {
+    const sections = document.querySelectorAll(".main-section");
+
+    // IntersectionObserver ayarları
+    const options = {
+      threshold: 0.4, // Section'ın %40'ı görünür olduğunda tetikle
+      rootMargin: "-20% 0px -35% 0px", // Viewport'un orta kısmında tetikle
+    };
+
+    const observer = new IntersectionObserver((entries) => {
+      entries.forEach((entry) => {
+        if (entry.isIntersecting) {
+          setActiveLink(`#${entry.target.id}`);
+        }
+      });
+    }, options);
+
+    // Her section'ı gözlemle
+    sections.forEach((section) => observer.observe(section));
+
+    // Cleanup
+    return () => sections.forEach((section) => observer.unobserve(section));
+  }, []);
+
+  const scrollToSection = (sectionId) => {
+    const section = document.querySelector(sectionId);
+    const container = document.querySelector(".main-container");
+    const headerOffset = 120;
+    const elementPosition = section.offsetTop;
+    const offsetPosition = elementPosition - headerOffset;
+
+    container.scrollTo({
+      top: Math.max(0, offsetPosition), // Negatif değerleri önle
+      behavior: "smooth",
+    });
   };
+
+  const handleClick = (e, link) => {
+    e.preventDefault();
+    setActiveLink(link);
+    // Smooth scroll
+    scrollToSection(link);
+  };
+
+  const navLinks = [
+    { href: "#about", text: "Hakkımda" },
+    { href: "#skills", text: "Yetenekler" },
+    { href: "#experiences", text: "Deneyimler" },
+    { href: "#projects", text: "Projeler" },
+  ];
 
   return (
     <div className="sidebar-container">
@@ -18,34 +66,20 @@ const Sidebar = () => {
       </div>
 
       <nav className="sidebar-nav">
-        <a
-          href="#about"
-          onClick={() => handleClick("#about")}
-          className={activeLink === "#about" ? "active" : ""}>
-          Hakkımda
-        </a>
-        <a
-          href="#skills"
-          onClick={() => handleClick("#skills")}
-          className={activeLink === "#skills" ? "active" : ""}>
-          Yetenekler
-        </a>
-        <a
-          href="#experiences"
-          onClick={() => handleClick("#experiences")}
-          className={activeLink === "#experiences" ? "active" : ""}>
-          Deneyimler
-        </a>
-        <a
-          href="#projects"
-          onClick={() => handleClick("#projects")}
-          className={activeLink === "#projects" ? "active" : ""}>
-          Projeler
-        </a>
+        {navLinks.map(({ href, text }) => (
+          <a
+            key={href}
+            href={href}
+            onClick={(e) => handleClick(e, href)}
+            className={activeLink === href ? "active" : ""}>
+            {text}
+          </a>
+        ))}
       </nav>
 
       <SocialLinks />
     </div>
   );
 };
+
 export default Sidebar;
