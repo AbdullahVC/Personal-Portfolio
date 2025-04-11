@@ -32,12 +32,12 @@ const Sidebar = () => {
   const scrollToSection = (sectionId) => {
     const section = document.querySelector(sectionId);
     const container = document.querySelector(".main-container");
-    const headerOffset = 120;
+    const headerOffset = 0;
     const elementPosition = section.offsetTop;
     const offsetPosition = elementPosition - headerOffset;
 
     container.scrollTo({
-      top: Math.max(0, offsetPosition), // Negatif değerleri önle
+      top: offsetPosition,
       behavior: "smooth",
     });
   };

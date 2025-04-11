@@ -1,6 +1,8 @@
 .app {
   display: flex;
-  height: 100vh;
+  flex-wrap: wrap;
+  min-height: 100vh;
+  overflow: hidden;
 }
 
 .sidebar-container {
@@ -8,30 +10,94 @@
   top: 0;
   left: 0;
   height: 100%;
-  width: 50%;
+  width: 40%;
   display: flex;
   flex-direction: column;
   align-items: self-end;
   justify-content: space-between;
   z-index: 100;
   text-align: right;
-  padding-top: 3rem;
-  gap: 3rem;
+  gap: clamp(1rem, 2vw, 2rem);
+  padding-top: clamp(1.5rem, 3vw, 3rem);
 }
 
 .main-container {
-  width: 60%;
-  height: 100%;
-  margin-left: 50%;
-  padding-left: 2rem;
-  padding-bottom: 2rem;
+  box-sizing: border-box;
+  min-width: 60%;
+  height: 100vh;
+  margin-left: 40%;
+  padding: 0 2rem;
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  justify-content: space-around;
   overflow-y: auto;
-  scroll-behavior: auto;
-  padding-top: 3rem;
+  scroll-snap-type: y mandatory;
+  scroll-behavior: smooth;
+}
+
+.main-section {
+  scroll-snap-align: start;
+  scroll-snap-stop: always;
+}
+
+/* 📱 Tablet - 992px ve altı */
+@media (max-width: 992px) {
+  .app {
+    display: flex;
+    flex-direction: column;
+    height: auto;
+    overflow: visible;
+  }
+
+  .sidebar-container {
+    position: relative;
+    width: 100%;
+    height: auto;
+    min-height: auto;
+    z-index: 0;
+    text-align: center;
+    align-items: center;
+    padding: 2rem 1rem;
+    gap: 2rem;
+  }
+
+  .main-container {
+    width: 100%;
+    height: auto;
+    min-height: 100vh;
+    margin-left: 0;
+    padding: 2rem;
+    scroll-snap-type: none;
+  }
+
+  .main-section {
+    scroll-snap-align: none;
+    scroll-snap-stop: normal;
+    min-height: auto;
+    padding: 3rem 0;
+  }
+}
+
+/* 📱 Büyük Telefon - 768px ve altı */
+@media (max-width: 768px) {
+  .main-container {
+    padding: 1.5rem;
+  }
+
+  .main-section {
+    padding: 2rem 0;
+  }
+}
+
+/* 📱 Küçük Telefon - 576px ve altı */
+@media (max-width: 576px) {
+  .main-container {
+    padding: 1rem;
+  }
+
+  .main-section {
+    padding: 1.5rem 0;
+  }
 }
 
 /* Scrollbar */
@@ -53,40 +119,4 @@
 /* Hover efekti */
 ::-webkit-scrollbar-thumb:hover {
   background-color: #64748b; /* biraz daha açık gri */
-}
-
-/* 📱 Tablet - 992px ve altı */
-@media (max-width: 992px) {
-  .app {
-    display: flex; /* bu önemli */
-    flex-direction: column; /* bu zaten doğru */
-  }
-
-  .sidebar-container {
-    position: relative; /* fixed değil artık */
-    width: 100%;
-    height: auto;
-    z-index: 0;
-    text-align: center;
-    align-items: center;
-    padding-top: 2rem;
-  }
-
-  .main-container {
-    width: 100%;
-    height: auto;
-    margin-left: 0;
-    padding-left: 0;
-    padding-top: 1rem;
-  }
-}
-
-/* 📱 Büyük Telefon - 768px ve altı */
-@media (max-width: 768px) {
-  /* Büyük telefonlar için stiller */
-}
-
-/* 📱 Küçük Telefon - 576px ve altı */
-@media (max-width: 576px) {
-  /* Küçük telefonlar için stiller */
 }

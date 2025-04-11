@@ -1,0 +1,15 @@
+/* Tüm section'lar için temel scroll margin ayarı */
+section {
+  scroll-margin-top: clamp(
+    4rem,
+    5vw,
+    6rem
+  ); /* navbar yüksekliğine göre ayarlayın */
+}
+
+/* Responsive ayarlar */
+@media (max-width: 768px) {
+  section {
+    scroll-margin-top: clamp(3rem, 4vw, 5rem); /* mobil için daha küçük değer */
+  }
+}
