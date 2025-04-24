@@ -5,7 +5,7 @@
  
  ## 🔍 Demo
  
-[https://abdullahcoskun.dev](https://abdullahvcoskun.dev/)
+[abdullahcoskun.dev](https://abdullahvcoskun.dev/)
  
  ## 🚀 Technologies
  
@@ -18,13 +18,10 @@
  ## 📋 Features
  
  - Modern and responsive design
- - Animated user interface
  - Project showcase
  - Experience and skills sections
  - Personal information and contact details
  - Custom cursor animation
- - Light/Dark theme support
- - Multilingual support (Turkish/English)
  - SEO optimization
  
  ## 🏗️ Project Structure
@@ -60,81 +57,15 @@
  
  The data in the project (experiences, projects, skills) is organized in a modular structure. To add new projects or experiences, simply update the relevant data files.
  
- ## 🛠️ Setup and Running
- 
- ### Requirements
- 
- - Node.js (v18 or higher)
- - npm/yarn
- 
- ### Setup Steps
- 
- 1. Clone the repository:
-    ```bash
-    git clone <repo-url>
-    cd v1
-    ```
- 
- 2. Install dependencies:
-    ```bash
-    npm install
-    ```
- 
- 3. Start the development server:
-    ```bash
-    npm run dev
-    ```
- 
- 4. Open in your browser:
-    ```
-    http://localhost:5173
-    ```
- 
- ## 📦 Building
- 
- To build the project:
- 
- ```bash
- npm run build
- ```
- 
- The compiled files will be created in the `dist/` directory.
- 
- ## 🧪 Linting
- 
- To check code quality:
- 
- ```bash
- npm run lint
- ```
- 
- ## 🔍 Performance Optimization
- 
- - Image optimization
- - Code splitting
- - Lazy loading components
- - Optimized CSS and JS
- - Caching strategies
- 
- ## 👨‍💻 Contributing
- 
- If you want to contribute to the project:
- 
- 1. Fork this repository
- 2. Create your own branch (`git checkout -b feature/NewFeature`)
- 3. Commit your changes (`git commit -m 'New feature: XYZ'`)
- 4. Push to the repository (`git push origin feature/NewFeature`)
- 5. Create a Pull Request
- 
  ### Code Standards
  
  - Code according to ESLint rules
  - Organize components logically
  - Use descriptive variable and function names
- - Write unit tests for changes
  
  ## 🔮 Future Plans
  
+ - Multilingual support (Turkish/English)
  - Blog section
  - PDF CV download feature
  - More advanced animations
