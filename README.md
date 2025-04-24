@@ -5,7 +5,7 @@
  
  ## 🔍 Demo
  
- [https://abdullahcoskun.dev](https://abdullahcoskun.dev)
+[ [https://abdullahcoskun.dev](https://abdullahcoskun.dev)](https://abdullahvcoskun.dev/)
  
  ## 🚀 Technologies
  
